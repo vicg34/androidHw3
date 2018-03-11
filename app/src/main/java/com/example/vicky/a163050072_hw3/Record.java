@@ -27,11 +27,11 @@ public class Record extends Fragment {
                 if (onOffSwitch.isPressed()) {
                     Log.v("Switch Statev=", ""+isChecked);
                     if(isChecked){
-                        Log.v("Switch State inside ispressed1=", ""+isChecked);
+                        Log.v("Switch side ispressed1=", ""+isChecked);
                         getActivity().startService(new Intent(getActivity(),SensorListener.class));
-                        Log.v("Switch State inside ispressed2=", ""+isChecked);
+                        Log.v("Switch side ispressed2=", ""+isChecked);
                     }else{
-                        Log.v("Switch State inside ispressed vicky=", ""+isChecked);
+                        Log.v("Swside ispressed vicky=", ""+isChecked);
                         getActivity().stopService(new Intent(getActivity(),SensorListener.class));
                     }
                 }

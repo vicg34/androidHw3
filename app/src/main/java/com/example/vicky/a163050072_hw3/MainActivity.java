@@ -1,5 +1,6 @@
 package com.example.vicky.a163050072_hw3;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -64,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        stopService(new Intent(MainActivity.this,SensorListener.class));
     }
 
     @Override
